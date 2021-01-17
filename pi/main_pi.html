@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="sdpi.css">
   <script src="main_pi.js"></script>
   <style>
-    .hidden, .hiddenError, .hiddenAll {
+    .hidden,
+    .hiddenError,
+    .hiddenAll {
       display: none;
     }
   </style>
@@ -17,18 +19,30 @@
   <div class="sdpi-wrapper hiddenAll">
     <div class="sdpi-item">
       <div class="sdpi-item-label">API Token</div>
-      <input class="sdpi-item-value" id="apitoken" value="" pattern="[a-z0-9]+" placeholder="Enter your Private API Token"
-        onchange="setAPIToken()" required>
+      <input class="sdpi-item-value" id="apitoken" value="" pattern="[a-z0-9]+"
+        placeholder="Enter your Private API Token" onchange="setAPIToken()" required>
     </div>
     <div class="sdpi-item" id="error">
       <details class="message caution">
         <summary>API Token is invalid!</summary>
       </details>
     </div>
+    <div class="sdpi-item">
+      <div class="sdpi-item-label">User ID</div>
+      <input class="sdpi-item-value" id="userid" value=""
+        placeholder="Enter API token to fill" required readonly>
+    </div>
     <hr>
     <div class="sdpi-item invalidHidden hidden" id="labelWrapper">
       <div class="sdpi-item-label">Button Label</div>
       <input class="sdpi-item-value" id="label" value="" placeholder="Label" onchange="sendSettings()">
+    </div>
+    <div class="sdpi-item invalidHidden hidden" id="activityPromptWrapper" type="checkbox">
+      <div class="sdpi-item-label">Entry prompt</div>
+      <div class="sdpi-item-value">
+        <input id="promptToggle" type="checkbox" onchange="sendSettings()">
+        <label for="promptToggle"><span></span>On</label>
+      </div>
     </div>
     <div class="sdpi-item invalidHidden hidden" id="activityWrapper">
       <div class="sdpi-item-label">Entry Name</div>
@@ -55,23 +69,8 @@
       <div class="sdpi-item-label">Billable</div>
       <select class="sdpi-item-value select" id="billable" onchange="sendSettings()">
         <option value="0" selected>No</option>
-        <option value="1">Yes (paid Toggl plans only)</option>
+        <option value="1">Yes</option>
       </select>
-    </div>
-    <div class="sdpi-item">
-      <details class="message info">
-        <summary class="sdpi-item-value">
-          <div class="sdpi-item-child"><a onclick="openPage('www.toggl.com/app/timer')">Open Toggl</a></div>
-          <div class="sdpi-item-child" style="margin-top: -6px"><a onclick="openPage('www.toggl.com/app/profile')">Get Toggl API Token</a></div>
-          <div class="sdpi-item-child" style="margin-top: -2px"><a onclick="openPage('discord.gg/YWy3UAy')">Discord</a></div>
-          <div class="sdpi-item-child" style="margin-top: -6px"><a onclick="openPage('github.com/tobimori/streamdeck-toggl')">GitHub</a></div>
-        </summary>
-      </details>
-    </div>
-    <div class="sdpi-item">
-      <details class="message">
-        <summary style="margin-top: -10px">A project by <a onclick="openPage('moeritz.io')">tobimori</a></summary>
-      </details>
     </div>
   </div>
 </body>

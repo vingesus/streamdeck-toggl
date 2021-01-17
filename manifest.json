@@ -2,7 +2,7 @@
     "Actions": [
       {
         "Icon": "resources/actionIcon", 
-        "Name": "Toggl", 
+        "Name": "Clockify", 
         "States": [
           {
             "Image": "resources/actionImageOn",
@@ -24,7 +24,7 @@
     "Author": "tobimori", 
     "CodePath": "plugin/main.html", 
     "Description": "Hassle-free time tracking using the Elgato Stream Deck and Toggl.", 
-    "Name": "Toggl", 
+    "Name": "Clockify", 
     "Icon": "resources/pluginIcon", 
     "PropertyInspectorPath": "pi/main_pi.html",
     "URL": "https://moeritz.io", 
